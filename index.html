@@ -105,6 +105,19 @@
       color: #fff;
     }
   </style>
+
+	<script>
+(function () {
+  var path = window.location.pathname;
+
+  // homepage
+  if (path !== "/" && path !== "/index.html") {
+    window.location.replace("/");
+  }
+})();
+</script>
+
+	
 </head>
 <body>
 
