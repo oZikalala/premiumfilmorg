@@ -1,369 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="auto">
 <head>
-  <meta charset="UTF-8">
-  <title>premiumfilm.org – Latest Movies & TV Updates</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
-  <meta name="description" content="Discover movies and TV shows from around the world. Reviews, updates, and where to watch.">
-  <meta property="og:title" content="premiumfilm.org – Latest Movies & TV Updates" />
-  <meta property="og:description" content="Discover movies and TV shows from around the world. Reviews, updates, and where to watch." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://oZikalala.github.io/premiumfilmorg/" />
-  <meta property="og:image" content="/logo.png" />
+  <title id="page-title">Premiumfilm.org | Watch Movies & TV Shows Online</title>
+  <meta name="description" content="Watch Movies & TV Shows online with fast streaming experience on mobile and desktop.">
+
   <meta name="robots" content="index, nofollow">
-  <meta name="referrer" content="no-referrer">
+  <link rel="canonical" href="https://Premiumfilm.org">
 
   <style>
+    :root {
+      --bg: #0f1724;
+      --card: rgba(255,255,255,0.06);
+      --text: #e6eef6;
+      --accent: #06b6d4;
+      --muted: #9aa4b2;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, var(--bg), #071024);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px;
+      min-height: 100vh;
     }
 
-    header {
-      background: #151515;
-      padding: 15px 20px;
+    .profile {
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    p.bio {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 8px 0 24px;
+    }
+
+    .links {
+      display: grid;
+      gap: 14px;
+    }
+
+    .link {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: var(--radius);
+      background: var(--card);
+      color: var(--text);
+      font-weight: 600;
+      transition: all 0.2s ease;
     }
 
-    header h1 {
-      font-size: 20px;
-      margin: 0;
-      color: #f5c518;
-    }
-
-    .search-box input {
-      padding: 8px 10px;
-      border-radius: 4px;
-      border: none;
-      outline: none;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      background: #1c1c1c;
-      border-radius: 6px;
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
+    .link:hover {
+      background: var(--accent);
+      color: #042027;
       transform: scale(1.03);
     }
 
-    .card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-    }
-
-    .card .info {
-      padding: 8px;
-    }
-
-    .card h3 {
-      font-size: 14px;
-      margin: 0;
-      line-height: 1.3;
-    }
-
     footer {
-      background: #151515;
-      padding: 15px;
-      text-align: center;
-      font-size: 13px;
-      color: #aaa;
-      margin-top: 30px;
+      margin-top: 32px;
+      font-size: 12px;
+      color: var(--muted);
     }
 
-    footer a {
-      color: #aaa;
-      margin: 0 8px;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
+    @media (min-width: 600px) {
+      body { padding-top: 80px; }
     }
   </style>
-
-	<script>
-(function () {
-  var path = window.location.pathname;
-
-  // homepage
-  if (path !== "/" && path !== "/index.html") {
-    window.location.replace("/");
-  }
-})();
-</script>
-
-	
 </head>
+
 <body>
+  <div class="profile">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/396/804/small_2x/netflix-mobile-application-logo-free-png.png"
+         alt="Watch Movies & TV Shows Full Movie Online" class="avatar">
 
-<header>
-  <h1>premiumfilm.org</h1>
-  <div class="search-box">
-    <input type="text" placeholder="Search movies...">
-  </div>
-</header>
+    <h1 id="main-title">WATCH FULL MOVIE ONLINE</h1>
+    <p class="bio" id="subtitle">4K UHD • 1080p Full HD • 720p HD</p>
 
-<div class="container">
-  <div class="section-title">Latest Movies</div>
-
-  <div class="grid">
-    <!-- LATEST 1 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/dtPwBZjzqTaObjG4fKStRkBq1uu.jpg" alt="Movie">
-      <div class="info">
-        <h3>Greenland 2: Migration</h3>
-      </div>
-    </a>
-
-    <!-- LATEST 2 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/mlV70IuchLZXcXKowjwSpSfdfUB.jpg" alt="Movie">
-      <div class="info">
-        <h3>Send Help</h3>
-      </div>
-    </a>
-
-    <!-- LATEST 3 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/1LzdlxK9ctsnx7nXoGF1ImHKddl.jpg" alt="Movie">
-      <div class="info">
-        <h3>Mercy</h3>
-      </div>
-    </a>
-
-    <!-- LATEST 4 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg" alt="Movie">
-      <div class="info">
-        <h3>28 Years Later: The Bone Temple</h3>
-      </div>
-    </a>
-    
-    <!-- LATEST 5 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/fqAGFN2K2kDL0EHxvJaXzaMUkkt.jpg" alt="Movie">
-      <div class="info">
-        <h3>Return to Silent Hill</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 6 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/7K8w6mdrJp0oaSoKWGyjSZ4Zv2z.jpg" alt="Movie">
-      <div class="info">
-        <h3>Worldbreaker</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 7 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/z97hrgI5wbGbZvSVkBfAeBnFKAg.jpg" alt="Movie">
-      <div class="info">
-        <h3>Primate</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 8 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zqxc2O6eOcPdkcmvem9kgGHvkmM.jpg" alt="Movie">
-      <div class="info">
-        <h3>No Other Choice</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 9 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/ykyRfv7JDofLxXLAwtLXaSuaFfM.jpg" alt="Movie">
-      <div class="info">
-        <h3>Dracula</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 10 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/bzBtsLi17rK4G6kDvOXfUZfAhca.jpg" alt="Movie">
-      <div class="info">
-        <h3>Sirāt</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 11 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/klvZs66SG19qmacdwxSRkdFQhQS.jpg" alt="Movie">
-      <div class="info">
-        <h3>Shelter</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 12 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/7X1VkuBg2LaT7yLkj0avzGcX2VN.jpg" alt="Movie">
-      <div class="info">
-        <h3>Iron Lung</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 13 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/ywRO5dyE8RyyXJd6cvd69jLZeic.jpg" alt="Movie">
-      <div class="info">
-        <h3>Wuthering Heights</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 14 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/oXIj3R3QxcQ9wkv9YBWouBNmnFZ.jpg" alt="Movie">
-      <div class="info">
-        <h3>GOAT</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 15 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/zMpJY5CJKUufG9OTw0In4eAFqPX.jpg" alt="Movie">
-      <div class="info">
-        <h3>Madagascar</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 16 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/h3OUaPfCaFmzwB2eMHik50RsXlP.jpg" alt="Movie">
-      <div class="info">
-        <h3>Back to the Past</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 17 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/pfqkETJ2A3zXZJuNcufZbAJNnKA.jpg" alt="Movie">
-      <div class="info">
-        <h3>Cold Storage</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 18 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/jjyuk0edLiW8vOSnlfwWCCLpbh5.jpg" alt="Movie">
-      <div class="info">
-        <h3>Scream 7</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 19 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/a15F5KJ4mleusJR1YKP4zUyZaxG.jpg" alt="Movie">
-      <div class="info">
-        <h3>Kokuho</h3>
-      </div>
-    </a>
-    
-        <!-- LATEST 19 -->
-    <a href="https://oZikalala.github.io/play/" class="card">
-      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/nvK6gYa4diCnQkDVN42uoYXPrdT.jpg" alt="Movie">
-      <div class="info">
-        <h3>The Rajasaab</h3>
-      </div>
-    </a>
-  </div>
-  
-</div>
-
-<footer>
-  <a href="#">About</a>
-  <a href="#">Privacy Policy</a>
-  <a href="#">DMCA</a>
-  <a href="#">Contact</a>
-  <p>© 2026 premiumfilm.org | All rights reserved.</p>
-</footer>
-
-<div id="floatads" style="
-  width:100%;
-  position:fixed;
-  bottom:0;
-  z-index:9999;
-  display:flex;
-  justify-content:center;
-">
-
-  <div style="position:relative;">
-
-    <!-- CLOSE BUTTON -->
-    <span
-      onclick='document.getElementById("floatads").style.display="none"'
-      title="Close"
-      style="
-        position:absolute;
-        top:-14px;
-        left:50%;
-        transform:translateX(-50%);
-        cursor:pointer;
-        font-size:12px;
-        font-weight:bold;
-        color:#fff;
-        background:#000;
-        border-radius:50%;
-        width:12px;
-        height:12px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        opacity:0.85;
-        z-index:10000;
-      "
-    >
-      ✕
-    </span>
-
-    <!-- ADS -->
-    <div style="display:flex;justify-content:center;">
-      <script>
-        atOptions = {
-          'key' : '926591d5604987960296a5fb83e2b0e1',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script src="https://laxativethem.com/926591d5604987960296a5fb83e2b0e1/invoke.js"></script>
+    <div class="links">
+      <a href="https://crn77.com/4/10016900" class="link" id="btn1">
+        ▶ WATCH NOW
+      </a>
+      <a href="https://data527.click/5cab48080fc69d72677f/90c3530f1d/?placementName=premiumfilm" class="link" id="btn2">
+        ▶ WATCH FULL HD
+      </a>
     </div>
 
+    <footer>
+      © <script>document.write(new Date().getFullYear())</script> Premiumfilm.org
+      <br>
+      <span id="footer-text">This page provides access to third-party promotional content.</span>
+    </footer>
   </div>
-</div>
 
-	
-	<!-- POPUNDER -->
-	
-	<script src="https://laxativethem.com/b6/40/e2/b640e294984ae6abcfcd35ced0e2957e.js"></script>
-	
-	<!-- Histats.com  START  (aync)-->
+<script>
+// Translations for 30+ languages
+const translations = {
+  en: { title:"WATCH FULL MOVIE ONLINE", pageTitle:"Premiumfilm.org | Watch Movies & TV Shows Online", description:"Watch Movies & TV Shows online with fast streaming experience on mobile and desktop.", btn1:"▶ WATCH NOW", btn2:"▶ WATCH FULL HD", footer:"This page provides access to third-party promotional content."},
+  id: { title:"NONTON FILM LENGKAP ONLINE", pageTitle:"Premiumfilm.org | Nonton Film & Acara TV Online", description:"Tonton film dan acara TV online dengan pengalaman streaming cepat di perangkat mobile dan desktop.", btn1:"▶ TONTON SEKARANG", btn2:"▶ TONTON FULL HD", footer:"Halaman ini menyediakan akses ke konten promosi pihak ketiga."},
+  zh: { title:"在线观看完整电影", pageTitle:"Premiumfilm.org | 在线观看电影和电视节目", description:"通过手机和桌面享受快速流媒体观看电影和电视节目。", btn1:"▶ 立即观看", btn2:"▶ 观看高清完整版", footer:"本页面提供第三方推广内容的访问。"},
+  "zh-tw": { title:"在線觀看完整電影", pageTitle:"Premiumfilm.org | 在線觀看電影和電視節目", description:"透過手機與桌面快速串流觀看電影與電視節目。", btn1:"▶ 立即觀看", btn2:"▶ 觀看高清完整版", footer:"本頁面提供第三方推廣內容的訪問。"},
+  ar: { title:"مشاهدة فيلم كامل اونلاين", pageTitle:"Premiumfilm.org | مشاهدة الأفلام والمسلسلات أونلاين", description:"توفر هذه الصفحة وصولاً إلى محتوى ترويجي تابع لجهات خارجية.", btn1:"▶ شاهد الآن", btn2:"▶ شاهد بجودة HD كاملة", footer:"توفر هذه الصفحة وصولاً إلى محتوى ترويجي تابع لجهات خارجية."},
+  fr: { title:"REGARDER FILM COMPLET EN LIGNE", pageTitle:"Premiumfilm.org | Regarder Films & Séries En Ligne", description:"Cette page fournit un accès à du contenu promotionnel tiers.", btn1:"▶ REGARDER MAINTENANT", btn2:"▶ REGARDER EN FULL HD", footer:"Cette page fournit un accès à du contenu promotionnel tiers."},
+  es: { title:"VER PELÍCULA COMPLETA ONLINE", pageTitle:"Premiumfilm.org | Ver Películas y Series Online", description:"Mira películas y programas de TV en línea con una experiencia de streaming rápida en dispositivos móviles y de escritorio.", btn1:"▶ VER AHORA", btn2:"▶ VER EN FULL HD", footer:"Esta página proporciona acceso a contenido promocional de terceros."},
+  de: { title:"FILM ONLINE IN VOLLER LÄNGE ANSEHEN", pageTitle:"Premiumfilm.org | Filme & Serien Online Ansehen", description:"Diese Seite bietet Zugriff auf Werbeinhalte von Drittanbietern.", btn1:"▶ JETZT ANSEHEN", btn2:"▶ IN FULL HD ANSEHEN", footer:"Diese Seite bietet Zugriff auf Werbeinhalte von Drittanbietern."},
+  it: { title:"GUARDA FILM COMPLETI ONLINE", pageTitle:"Premiumfilm.org | Guarda Film e Serie TV Online", description:"Guarda film e programmi TV online con un'esperienza di streaming veloce su mobile e desktop.", btn1:"▶ GUARDA ORA", btn2:"▶ GUARDA IN FULL HD", footer:"Questa pagina fornisce accesso a contenuti promozionali di terze parti."},
+  ko: { title:"전체 영화 온라인 시청", pageTitle:"Premiumfilm.org | 영화 및 TV 프로그램 온라인 시청", description:"이 페이지는 제3자 홍보 콘텐츠에 대한 액세스를 제공합니다.", btn1:"▶ 지금 시청", btn2:"▶ 풀 HD 시청", footer:"이 페이지는 제3자 홍보 콘텐츠에 대한 액세스를 제공합니다."},
+  nl: { title:"VOLLEDIGE FILMS ONLINE BEKIJKEN", pageTitle:"Premiumfilm.org | Films en TV-programma's Online Bekijken", description:"Bekijk films en tv-programma's online met een snelle streamingervaring op mobiel en desktop.", btn1:"▶ BEKIJK NU", btn2:"▶ BEKIJK IN FULL HD", footer:"Deze pagina biedt toegang tot promotionele inhoud van derden."},
+  pl: { title:"OGLĄDAJ CAŁY FILM ONLINE", pageTitle:"Premiumfilm.org | Oglądaj Filmy i Programy TV Online", description:"Oglądaj filmy i programy telewizyjne online z szybkim streamingiem na urządzeniach mobilnych i desktopowych.", btn1:"▶ OGLĄDAJ TERAZ", btn2:"▶ OGLĄDAJ W FULL HD", footer:"Ta strona zapewnia dostęp do treści promocyjnych stron trzecich."},
+  pt: { title:"ASSISTIR FILME COMPLETO ONLINE", pageTitle:"Premiumfilm.org | Assistir Filmes e Séries Online", description:"Assista filmes e programas de TV online com uma experiência de streaming rápida em dispositivos móveis e desktop.", btn1:"▶ ASSISTIR AGORA", btn2:"▶ ASSISTIR EM FULL HD", footer:"Esta página fornece acesso a conteúdo promocional de terceiros."},
+  ro: { title:"VEZI FILM COMPLET ONLINE", pageTitle:"Premiumfilm.org | Urmărește Filme și Emisiuni TV Online", description:"Urmărește filme și emisiuni TV online cu experiență de streaming rapidă pe mobil și desktop.", btn1:"▶ VEZI ACUM", btn2:"▶ VEZI ÎN FULL HD", footer:"Această pagină oferă acces la conținut promoțional de la terți."},
+  ru: { title:"СМОТРЕТЬ ФИЛЬМ ОНЛАЙН ПОЛНОСТЬЮ", pageTitle:"Premiumfilm.org | Смотреть фильмы и сериалы онлайн", description:"Эта страница предоставляет доступ к рекламному контенту третьих лиц.", btn1:"▶ СМОТРЕТЬ СЕЙЧАС", btn2:"▶ СМОТРЕТЬ В FULL HD", footer:"Эта страница предоставляет доступ к рекламному контенту третьих лиц."},
+  sk: { title:"SLEDUJTE CELÝ FILM ONLINE", pageTitle:"Premiumfilm.org | Sledujte Filmy a TV Programy Online", description:"Sledujte filmy a TV programy online s rýchlym streamovaním na mobilných a desktop zariadeniach.", btn1:"▶ SLEDUJTE TERAZ", btn2:"▶ SLEDUJTE V FULL HD", footer:"Táto stránka poskytuje prístup k obsahu tretích strán."},
+  sr: { title:"GLEDANJE CELIH FILMOVA ONLINE", pageTitle:"Premiumfilm.org | Gledajte Filmove i TV Emisije Online", description:"Gledajte filmove i TV emisije online sa brzim streaming iskustvom na mobilnim i desktop uređajima.", btn1:"▶ GLEDAJ SADA", btn2:"▶ GLEDAJ U FULL HD", footer:"Ova stranica pruža pristup sadržaju trećih strana."},
+  th: { title:"ดูหนังเต็มเรื่องออนไลน์", pageTitle:"Premiumfilm.org | ดูหนังและรายการทีวีออนไลน์", description:"หน้านี้ให้การเข้าถึงเนื้อหาโปรโมชั่นของบุคคลที่สาม", btn1:"▶ ดูเลย", btn2:"▶ ดูแบบ FULL HD", footer:"หน้านี้ให้การเข้าถึงเนื้อหาโปรโมชั่นของบุคคลที่สาม"},
+  tr: { title:"FİLMİ TAM OLARAK ONLINE İZLE", pageTitle:"Premiumfilm.org | Film ve Dizileri Online İzle", description:"Bu sayfa üçüncü taraf tanıtım içeriklerine erişim sağlar.", btn1:"▶ ŞİMDİ İZLE", btn2:"▶ FULL HD İZLE", footer:"Bu sayfa üçüncü taraf tanıtım içeriklerine erişim sağlar."},
+  uz: { title:"TOʻLIQ FILMNI ONLINE KO‘RISH", pageTitle:"Premiumfilm.org | Film va TV Ko‘rsatuvlarini Online Ko‘rish", description:"Mobil va desktop qurilmalarda tezkor streaming bilan filmlar va TV ko‘rsatuvlarini tomosha qiling.", btn1:"▶ HOZIR KO‘RISH", btn2:"▶ FULL HD KO‘RISH", footer:"Ushbu sahifa uchinchi tomon reklama kontentiga kirish imkonini beradi."},
+  vi: { title:"XEM PHIM ĐẦY ĐỦ TRỰC TUYẾN", pageTitle:"Premiumfilm.org | Xem Phim & Chương Trình TV Online", description:"Trang này cung cấp quyền truy cập vào nội dung quảng cáo của bên thứ ba.", btn1:"▶ XEM NGAY", btn2:"▶ XEM FULL HD", footer:"Trang này cung cấp quyền truy cập vào nội dung quảng cáo của bên thứ ba."},
+  ja: { title:"映画をフルでオンライン視聴", pageTitle:"Premiumfilm.org | 映画＆テレビ番組をオンラインで視聴", description:"このページは第三者のプロモーションコンテンツへのアクセスを提供します。", btn1:"▶ 今すぐ見る", btn2:"▶ フルHDで見る", footer:"このページは第三者のプロモーションコンテンツへのアクセスを提供します。"}
+};
+
+// Auto-detect language
+const userLang = navigator.language.toLowerCase();
+let lang = "en";
+if(translations[userLang]) lang = userLang;
+else if(translations[userLang.slice(0,2)]) lang = userLang.slice(0,2);
+
+// Apply translations
+document.documentElement.lang = lang;
+document.getElementById("main-title").innerText = translations[lang].title;
+document.getElementById("btn1").innerText = translations[lang].btn1;
+document.getElementById("btn2").innerText = translations[lang].btn2;
+document.getElementById("footer-text").innerText = translations[lang].footer;
+document.title = translations[lang].pageTitle;
+document.querySelector('meta[name="description"]').setAttribute("content", translations[lang].description);
+</script>
+
+  <script async="async" data-cfasync="false" src="https://laxativethem.com/f640dbca1a68fdc68ec8600cf8716c18/invoke.js"></script>
+<div id="container-f640dbca1a68fdc68ec8600cf8716c18"></div>
+  
+  <script src="https://laxativethem.com/13/1d/51/131d51df5a8e24c86dd30bca5cb7af4a.js"></script>
+  
+</body>
+<!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4980993,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
@@ -375,5 +183,4 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4980993&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
-</body>
 </html>
